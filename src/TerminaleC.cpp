@@ -30,7 +30,7 @@ void TerminaleC::SaisirNote()
   {
     cout << "Saisir la note de " << matiere[i].nom << " : " ;
     cin >> note;
-    matiere[i].SetNote(note);
+    matiere[i].SetNote(note*matiere[i].GetCoef());
   }
 }
 float TerminaleC::CalculerMoyenne()
