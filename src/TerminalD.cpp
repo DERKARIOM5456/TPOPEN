@@ -37,7 +37,7 @@ float TerminaleD::CalculerMoyenne()
     int coefTotal=0;
     for(int i(0);i<6;i++)
     {
-          noteTotal= noteTotal+matiere[i].GetNote();
+          noteTotal= noteTotal+matiere[i].GetNote()*matiere[i].GetCoef();
           coefTotal=coefTotal+matiere[i].GetCoef();
     }
     return(noteTotal/coefTotal);
