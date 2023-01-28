@@ -1,5 +1,5 @@
 #include<iostream>
-#include"TerminaleE.hpp"
+#include"../include/TerminaleE.hpp"
 TerminaleE::TerminaleE():Terminale(6)
 {
     matiere[0].SetNom("Mathematique");
@@ -37,8 +37,8 @@ float TerminaleE::CalculerMoyenne()
     int coefTotal=0;
     for(int i(0);i<6;i++)
     {
-          noteTotal= noteTotal+matiere[i].GetNote();
-          coefTotal=coefTotal+matiere[i].GetCoef();
+          noteTotal+=matiere[i].GetNote()*matiere[i].GetCoef();
+          coefTotal+=matiere[i].GetCoef();
     }
     return(noteTotal/coefTotal);
 }
