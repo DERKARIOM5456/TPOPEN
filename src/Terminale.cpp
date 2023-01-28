@@ -1,7 +1,7 @@
 #include<iostream>
 #include<stdlib.h>
 #include<fstream>
-#include "../Terminale.hpp"
+#include "../include/Terminale.hpp"
 using namespace std;
 Terminale::Terminale(int nbr)
 {
@@ -13,13 +13,13 @@ Terminale::~Terminale()
 	delete(matiere);
 	nbrMatiere=0;
 }
-Terminale::Sauvegarde(string num)
+void Terminale::Sauvegarder(string num)
 {
-	std::ofstream file{num+".txt"}
+	std::ofstream file{num + ".txt"};
 	if(CalculerMoyenne()>=10)
-		 file << "Validé"
+		 file << "Validé";
 	else
-		file << "Refusé"
+		file << "Refusé";
 }
 
 
