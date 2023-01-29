@@ -6,6 +6,7 @@
   	public:
   		TerminaleC();
   		void SaisirNote();
+	private:
   		float CalculerMoyenne();
   };
 #endif
