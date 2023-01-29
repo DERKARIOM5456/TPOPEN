@@ -28,7 +28,7 @@ void TerminaleC::SaisirNote()
   int note=0;
   for(int i=0;i<6;i++)
   {
-    cout << "Saisir la note de " << matiere[i].nom << " : " ;
+    cout << "Saisir la note de " << matiere[i].GetNom()<< " : " ;
     cin >> note;
     matiere[i].SetNote(note*matiere[i].GetCoef());
   }
