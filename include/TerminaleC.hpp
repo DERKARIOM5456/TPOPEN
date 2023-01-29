@@ -3,10 +3,11 @@
 #include "Terminale.hpp"
 class TerminaleC:Terminale
 {
+	private:
+  		float CalculerMoyenne();
   	public:
   		TerminaleC();
   		void SaisirNote();
-  		float CalculerMoyenne();
 };
 #endif
 

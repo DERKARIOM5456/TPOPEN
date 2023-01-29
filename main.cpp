@@ -16,27 +16,47 @@ class Type
 };
 bool EstDansLaBaseAgent(string);
 void Nettoyage();
-
+void InterfaceDeChoixTerminale();
+void InterfaceDeChoixVisiteur();
 int main()
 {
-    Type<int> lecture;
-    int var;
-    string pass,mat;
+    Type<int> lectureInt;
+    Type<string> lectureString;
+    int choixVisiteur,choixTerminale;
+    int ressai;
+    string matAgent;
     Nettoyage();
     InterfaceDeChoixVisiteur();
-    lecture.LectureSecuriser(var);
+    lectureInt.LectureSecuriser(choixVisiteur);
     do
     {
-        switch (var)
+        switch (choixVisiteur)
         {
             case 1:
-                if(EstDansLaBaseAgent("62222"))
+                Nettoyage();
+                cout <<"\nmatricule > ";
+                lectureString.LectureSecuriser(matAgent);
+                if(EstDansLaBaseAgent(matAgent))
+                {
+                    Nettoyage();
+                    InterfaceDeChoixTerminale();
+                    lectureInt.LectureSecuriser(choixTerminale);
+                    switch (choixTerminale)
+                    {
+                    case 1:
+                        
+                        break;
+                    
+                    default:
+                        break;
+                    }
+                }
                 break;
             
             default:
                 break;
         }
-    }while(var!=3);
+    }while(choixVisiteur!=3);
     if(EstDansLaBaseAgent("62222")==true)
         cout << "oui";
     else
@@ -132,6 +152,28 @@ void InterfaceDeChoixVisiteur()
     printf("\n#       2 - Candidat                   #");
     printf("\n#                                      #");
     printf("\n#       3 - Quitter                    #");
+    printf("\n#                                      #");
+    printf("\n#                                      #");
+    printf("\n##################-(By Visionnaire)-####\n");
+    printf("\nVotre choix ? : ");
+    
+}
+
+//------------------------------------------------------------------
+
+void InterfaceDeChoixTerminale()
+{
+    printf("\n###-[G-BAC]-############################");
+    printf("\n#                                      #");
+    printf("\n#                                      #");
+    printf("\n#                                      #");
+    printf("\n#       1 - Terminal A                 #");
+    printf("\n#                                      #");
+    printf("\n#       2 - Terminal C                 #");
+    printf("\n#                                      #");
+    printf("\n#       3 - Terminal D                 #");
+    printf("\n#                                      #");
+    printf("\n#       4 - Terminal E                 #");
     printf("\n#                                      #");
     printf("\n#                                      #");
     printf("\n##################-(By Visionnaire)-####\n");
