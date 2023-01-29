@@ -35,9 +35,10 @@ void TerminaleC::SaisirNote()
 }
 float TerminaleC::CalculerMoyenne()
 {
-  int som{0};
+  int som{0},coef(0);
   for (int i = 0; i < 5; i++) {
     som += matiere[i].GetNote();
+    coef+=matiere[i].GetCoef();
   }
-  return (som/6);
+  return (som/coef);
 }
