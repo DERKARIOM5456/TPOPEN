@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../include/TerminaleC.hpp"
 using namespace std;
-TerminaleC::TerminaleC():Terminale(6)
+TerminaleC::TerminaleC(int n):Terminale(nbrMatiere)
 {
   matiere[0].SetNom("Maths");
   matiere[0].SetCoef(6);

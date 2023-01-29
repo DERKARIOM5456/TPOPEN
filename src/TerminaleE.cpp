@@ -1,6 +1,6 @@
 #include<iostream>
 #include"../include/TerminaleE.hpp"
-TerminaleE::TerminaleE():Terminale(6)
+TerminaleE::TerminaleE(int n):Terminale(nbrMatiere)
 {
     matiere[0].SetNom("Mathematique");
     matiere[0].SetNote(0);

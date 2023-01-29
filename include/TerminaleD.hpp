@@ -1,11 +1,11 @@
-#ifndef TERMINALEE_HPP
-#define TERMINALEE_HPP
+#ifndef TERMINALED_HPP
+#define TERMINALED_HPP
 #include "Terminale.hpp"
 class TerminaleD: public Terminale
 {
    float CalculerMoyenne();
    public:
-   TerminaleD();
+   TerminaleD(int);
    void SaisirNote();
 };
 #endif

@@ -5,7 +5,7 @@ class TerminaleE: public Terminale
 {
    float CalculerMoyenne();
    public:
-   TerminaleE();
+   TerminaleE(int);
    void SaisirNote();
 };
 #endif

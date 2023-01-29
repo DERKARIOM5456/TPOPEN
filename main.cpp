@@ -4,6 +4,9 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include "include/TerminaleC.hpp"
+#include "include/TerminaleD.hpp"
+#include "include/TerminaleE.hpp"
 using namespace std;
 template<class T>
 class Type
@@ -11,7 +14,7 @@ class Type
     private:
         T val;
     public:
-        void LectureSecuriser(T);
+        void LectureSecuriser(T&);
         
 };
 bool EstDansLaBaseAgent(string);
@@ -25,15 +28,19 @@ int main()
     int choixVisiteur,choixTerminale;
     int ressai;
     string matAgent;
-    Nettoyage();
-    InterfaceDeChoixVisiteur();
-    lectureInt.LectureSecuriser(choixVisiteur);
+    TerminaleD D(6);
+    TerminaleC C(6);
+    TerminaleE E(6);
+    
     do
     {
+        Nettoyage();
+        InterfaceDeChoixVisiteur();
+        lectureInt.LectureSecuriser(choixVisiteur);
+        Nettoyage();
         switch (choixVisiteur)
         {
             case 1:
-                Nettoyage();
                 cout <<"\nmatricule > ";
                 lectureString.LectureSecuriser(matAgent);
                 if(EstDansLaBaseAgent(matAgent))
@@ -44,12 +51,28 @@ int main()
                     switch (choixTerminale)
                     {
                     case 1:
-                        
+                        int effectif;
+                        int mat;
+                        cout << "\n###-[G-BAC]-############################";  
+                        cout << "\nEffectif > ";
+                        lectureInt.LectureSecuriser(effectif);
+                        for(int i=0;i<effectif;i++)
+                        {
+                            cout<< "Candidat N-"<<i+1;
+                            cout << "\n\tmatricule > ";
+                            lectureInt.LectureSecuriser(mat);
+                            D.SaisirNote();
+                        }
                         break;
                     
                     default:
                         break;
                     }
+                }
+                else
+                {
+                    Nettoyage();
+                    cout << "\nMatricule ou mot de passe incorrect";
                 }
                 break;
             
@@ -67,7 +90,7 @@ int main()
 //-------------------------------------------------
 
 template<class T>
-void Type<T>::LectureSecuriser(T obj)
+void Type<T>::LectureSecuriser(T &obj)
 {
     int ret;
     do
@@ -79,7 +102,7 @@ void Type<T>::LectureSecuriser(T obj)
             cin.clear();
             cin.ignore(255*255,'\n');
             cout << "\nRessayer : ";
-            
+               
         }
     }while(ret!=1);
             
@@ -128,8 +151,6 @@ bool EstDansLaBaseAgent(string mat)
         {
             passTm = mot;
         }
-        cout << "\n[ " <<matT << "  " << passTm << " ]\n";
-        cout << passTest;
         if(passTest==passTm && matT==mat)
             return true;
         
@@ -166,14 +187,11 @@ void InterfaceDeChoixTerminale()
     printf("\n###-[G-BAC]-############################");
     printf("\n#                                      #");
     printf("\n#                                      #");
+    printf("\n#       1 - Terminal C                 #");
     printf("\n#                                      #");
-    printf("\n#       1 - Terminal A                 #");
+    printf("\n#       2 - Terminal D                 #");
     printf("\n#                                      #");
-    printf("\n#       2 - Terminal C                 #");
-    printf("\n#                                      #");
-    printf("\n#       3 - Terminal D                 #");
-    printf("\n#                                      #");
-    printf("\n#       4 - Terminal E                 #");
+    printf("\n#       3 - Terminal E                 #");
     printf("\n#                                      #");
     printf("\n#                                      #");
     printf("\n##################-(By Visionnaire)-####\n");
