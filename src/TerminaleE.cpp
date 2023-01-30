@@ -23,7 +23,7 @@ TerminaleE::TerminaleE():Terminale(6)
 }
 void TerminaleE::SaisirNote()
 {
-    int n;
+    float n;
   for(int i(0); i<6 ;i++)
   {
       cout << matiere[i].GetNom() <<":" <<endl;
