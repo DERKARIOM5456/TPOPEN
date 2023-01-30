@@ -44,6 +44,5 @@ float TerminaleD::CalculerMoyenne()
 }
 TerminaleD::~TerminaleD()
 {
-	delete(matiere);
 	nbrMatiere=0;
 }

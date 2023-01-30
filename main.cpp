@@ -29,6 +29,10 @@ int main()
     int ressai;
     string matAgent;
     TerminaleD D(6);
+    TerminaleD C(6);
+    TerminaleD E(6);
+    string mat;
+
     
     do
     {
@@ -49,8 +53,8 @@ int main()
                     switch (choixTerminale)
                     {
                     case 1:
+                        Nettoyage();
                         int effectif;
-                        int mat;
                         cout << "\n###-[G-BAC]-############################";  
                         cout << "\nEffectif > ";
                         lectureInt.LectureSecuriser(effectif);
@@ -58,9 +62,11 @@ int main()
                         {
                             cout<< "Candidat N-"<<i+1;
                             cout << "\n\tmatricule > ";
-                            lectureInt.LectureSecuriser(mat);
-                            D.SaisirNote();
+                            lectureString.LectureSecuriser(mat);
+                            C.SaisirNote();
+                            C.Sauvegarder(mat);
                         }
+                        
                         break;
                     
                     default:

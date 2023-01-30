@@ -4,7 +4,7 @@
 class Terminale
 {
 	protected:
-		Matiere *matiere;
+		Matiere matiere[6];
 		int nbrMatiere;
 	private:
 		virtual float CalculerMoyenne()=0;

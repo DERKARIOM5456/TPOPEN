@@ -6,12 +6,9 @@ using namespace std;
 Terminale::Terminale(int nbr)
 {
 	nbrMatiere=nbr;
-	matiere=new Matiere[nbrMatiere];
-	matiere = NULL;
 }
 Terminale::~Terminale()
 {
-	delete(matiere);
 	nbrMatiere=0;
 }
 void Terminale::Sauvegarder(string num)
