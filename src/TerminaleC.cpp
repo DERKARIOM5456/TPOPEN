@@ -25,19 +25,22 @@ TerminaleC::TerminaleC():Terminale(6)
 
 void TerminaleC::SaisirNote()
 {
-  int note=0;
+  float note=0;
   for(int i=0;i<6;i++)
   {
     cout << "Saisir la note de " << matiere[i].nom << " : " ;
     cin >> note;
-    matiere[i].SetNote(note*matiere[i].GetCoef());
+    matiere[i].SetNote(note);
   }
 }
 float TerminaleC::CalculerMoyenne()
 {
-  int som{0};
+  float som{0};
+  int TotalCoef=0;
   for (int i = 0; i < 5; i++) {
-    som += matiere[i].GetNote();
+    som += matiere[i].GetNote()*matiere[i].GetCoef();
+    TotalCoef+=matiere[i].GetCoef();
   }
-  return (som/6);
+  float moy=som/TotalCoef;
+  return (moy);
 }

@@ -1,4 +1,4 @@
-#include<iostream>
+i#include<iostream>
 #include"TerminaleD.hpp"
 TerminaleD::TerminaleD():Terminale(6)
 {
