@@ -68,6 +68,38 @@ int main()
                         }
                         
                         break;
+                    case 2:
+                        Nettoyage();
+                        int effectif;
+                        cout << "\n###-[G-BAC]-############################";  
+                        cout << "\nEffectif > ";
+                        lectureInt.LectureSecuriser(effectif);
+                        for(int i=0;i<effectif;i++)
+                        {
+                            cout<< "Candidat N-"<<i+1;
+                            cout << "\n\tmatricule > ";
+                            lectureString.LectureSecuriser(mat);
+                            D.SaisirNote();
+                            D.Sauvegarder(mat);
+                        }
+                        
+                        break;
+                        case 3:
+                        Nettoyage();
+                        int effectif;
+                        cout << "\n###-[G-BAC]-############################";  
+                        cout << "\nEffectif > ";
+                        lectureInt.LectureSecuriser(effectif);
+                        for(int i=0;i<effectif;i++)
+                        {
+                            cout<< "Candidat N-"<<i+1;
+                            cout << "\n\tmatricule > ";
+                            lectureString.LectureSecuriser(mat);
+                            E.SaisirNote();
+                            E.Sauvegarder(mat);
+                        }
+                        
+                        break;
                     
                     default:
                         break;
