@@ -18,6 +18,8 @@ class Type
         
 };
 bool EstDansLaBaseAgent(string);
+bool EstDansLaBaseCandidat(string);
+string consulter(string);
 void Nettoyage();
 void InterfaceDeChoixTerminale();
 void InterfaceDeChoixVisiteur();
@@ -32,9 +34,7 @@ int main()
     TerminaleD C(6);
     TerminaleD E(6);
     int effectif;
-    string mat;
-
-    
+    string mat;    
     do
     {
         Nettoyage();
@@ -109,7 +109,18 @@ int main()
                     cout << "\nMatricule ou mot de passe incorrect";
                 }
                 break;
-            
+            case 2:
+                    Nettoyage();
+                    cout << "\n###-[G-BAC]-############################";
+                    cout << "\nmatricule > ";
+                    lectureString.LectureSecuriser(mat);
+                    if(EstDansLaBaseCandidat(mat))
+                        cout << "\n" << consulter(mat);
+                    else
+                    {
+                        Nettoyage();
+                        cout << "\nCe numero de matricule n'existe pas dans la base";
+                    }
             default:
                 break;
         }
@@ -188,20 +199,20 @@ bool EstDansLaBaseAgent(string mat)
 
 void InterfaceDeChoixVisiteur()
 {
-    printf("\n###-[G-BAC]-############################");
-    printf("\n#                                      #");
-    printf("\n#                                      #");
-    printf("\n#          Etes-vous un                #");
-    printf("\n#                                      #");
-    printf("\n#       1 - Agent                      #");
-    printf("\n#                                      #");
-    printf("\n#       2 - Candidat                   #");
-    printf("\n#                                      #");
-    printf("\n#       3 - Quitter                    #");
-    printf("\n#                                      #");
-    printf("\n#                                      #");
-    printf("\n##################-(By Visionnaire)-####\n");
-    printf("\nVotre choix ? : ");
+    cout <<"\n###-[G-BAC]-############################";
+    cout <<"\n#                                      #";
+    cout <<"\n#                                      #";
+    cout <<"\n#          Etes-vous un                #";
+    cout <<"\n#                                      #";
+    cout <<"\n#       1 - Agent                      #";
+    cout <<"\n#                                      #";
+    cout <<"\n#       2 - Candidat                   #";
+    cout <<"\n#                                      #";
+    cout <<"\n#       3 - Quitter                    #";
+    cout <<"\n#                                      #";
+    cout <<"\n#                                      #";
+    cout <<"\n##################-(By Visionnaire)-####\n";
+    cout <<"\nVotre choix ? : ";
     
 }
 
@@ -209,17 +220,32 @@ void InterfaceDeChoixVisiteur()
 
 void InterfaceDeChoixTerminale()
 {
-    printf("\n###-[G-BAC]-############################");
-    printf("\n#                                      #");
-    printf("\n#                                      #");
-    printf("\n#       1 - Terminal C                 #");
-    printf("\n#                                      #");
-    printf("\n#       2 - Terminal D                 #");
-    printf("\n#                                      #");
-    printf("\n#       3 - Terminal E                 #");
-    printf("\n#                                      #");
-    printf("\n#                                      #");
-    printf("\n##################-(By Visionnaire)-####\n");
-    printf("\nVotre choix ? : ");
+    cout << "\n###-[G-BAC]-############################";
+    cout << "\n#                                      #";
+    cout << "\n#                                      #";
+    cout << "\n#       1 - Terminal C                 #";
+    cout << "\n#                                      #";
+    cout << "\n#       2 - Terminal D                 #";
+    cout << "\n#                                      #";
+    cout << "\n#       3 - Terminal E                 #";
+    cout << "\n#                                      #";
+    cout << "\n#                                      #";
+    cout << "\n##################-(By Visionnaire)-####\n";
+    cout << "\nVotre choix ? : ";
     
+}
+bool EstDansLaBaseCandidat(string mat)
+{
+    mat+=".txt";
+    string test;
+    ifstream fichier{mat.c_str()};
+    return !fichier.fail();
+}
+string consulter(string mat)
+{
+    mat+=".txt";
+    string resultat;
+    ifstream fichier{mat,ios::app};
+    fichier >> resultat;
+    return resultat;
 }
