@@ -174,18 +174,13 @@ bool EstDansLaBaseAgent(string mat)
         string mot {debut,debut+distance(debut,iterateur)};
         passT.push_back(mot);
         for (std::string mot : matTest)
-        {
             matT = mot;
-        }
         for (std::string mot : passT)
-        {
             passTm = mot;
-        }
         if(passTest==passTm && matT==mat)
             return true;
         
     }
-
     return false;
 }
 
