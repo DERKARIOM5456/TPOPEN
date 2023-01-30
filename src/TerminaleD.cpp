@@ -1,5 +1,5 @@
-i#include<iostream>
-#include"TerminaleD.hpp"
+#include<iostream>
+#include"../include/TerminaleD.hpp"
 TerminaleD::TerminaleD():Terminale(6)
 {
     matiere[0].SetNom("Mathematique");
