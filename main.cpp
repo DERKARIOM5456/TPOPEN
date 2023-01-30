@@ -234,6 +234,9 @@ void InterfaceDeChoixTerminale()
     cout << "\nVotre choix ? : ";
     
 }
+
+//-------------------------------------------------------------------
+
 bool EstDansLaBaseCandidat(string mat)
 {
     mat+=".txt";
@@ -241,6 +244,9 @@ bool EstDansLaBaseCandidat(string mat)
     ifstream fichier{mat.c_str()};
     return !fichier.fail();
 }
+
+//------------------------------------------------------------------
+
 string consulter(string mat)
 {
     mat+=".txt";
