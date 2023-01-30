@@ -39,5 +39,5 @@ float TerminaleC::CalculerMoyenne()
   for (int i = 0; i < 5; i++) {
     som += matiere[i].GetNote();
   }
-  return (som/6);
+  return (som/22);
 }
