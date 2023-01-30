@@ -23,13 +23,13 @@ TerminaleE::TerminaleE(int n):Terminale(nbrMatiere)
 }
 void TerminaleE::SaisirNote()
 {
-    int n;
-  for(int i(0); i<6 ;i++)
-  {
-      cout << matiere[i].GetNom() <<":" <<endl;
-      cin >> n ;
-      matiere[i].SetNote(n);
-  }
+    float n;
+    for(int i(0); i<6 ;i++)
+    {
+        cout << matiere[i].GetNom() <<":" <<endl;
+        cin >> n ;
+        matiere[i].SetNote(n);
+    }
 }
 float TerminaleE::CalculerMoyenne()
 {

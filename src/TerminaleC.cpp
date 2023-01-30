@@ -25,7 +25,7 @@ TerminaleC::TerminaleC(int n):Terminale(nbrMatiere)
 
 void TerminaleC::SaisirNote()
 {
-  int note=0;
+  float note=0;
   for(int i=0;i<6;i++)
   {
     cout << "Saisir la note de " << matiere[i].GetNom() << " : " ;
