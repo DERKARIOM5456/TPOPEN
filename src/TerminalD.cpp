@@ -5,7 +5,7 @@ TerminaleD::TerminaleD():Terminale(6)
     matiere[0].SetNom("Mathematique");
     matiere[0].SetNote(0);
     matiere[0].SetCoef(5);
-    matiere[1].SetNom("Physique-Chimie");
+    matiere[1].SetNom("PhysiqueChimie");
     matiere[1].SetNote(0);
     matiere[1].SetCoef(5);
     matiere[2].SetNom("Francais");
