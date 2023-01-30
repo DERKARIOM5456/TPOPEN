@@ -1,5 +1,6 @@
 #include<iostream>
 #include"../include/TerminaleD.hpp"
+using namespace std;
 TerminaleD::TerminaleD():Terminale(6)
 {
     matiere[0].SetNom("Mathematique");
