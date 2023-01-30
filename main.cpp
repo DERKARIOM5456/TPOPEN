@@ -31,6 +31,7 @@ int main()
     TerminaleD D(6);
     TerminaleD C(6);
     TerminaleD E(6);
+    int effectif;
     string mat;
 
     
@@ -54,7 +55,6 @@ int main()
                     {
                     case 1:
                         Nettoyage();
-                        int effectif;
                         cout << "\n###-[G-BAC]-############################";  
                         cout << "\nEffectif > ";
                         lectureInt.LectureSecuriser(effectif);
@@ -70,7 +70,6 @@ int main()
                         break;
                     case 2:
                         Nettoyage();
-                        int effectif;
                         cout << "\n###-[G-BAC]-############################";  
                         cout << "\nEffectif > ";
                         lectureInt.LectureSecuriser(effectif);
@@ -86,7 +85,6 @@ int main()
                         break;
                         case 3:
                         Nettoyage();
-                        int effectif;
                         cout << "\n###-[G-BAC]-############################";  
                         cout << "\nEffectif > ";
                         lectureInt.LectureSecuriser(effectif);
@@ -116,10 +114,6 @@ int main()
                 break;
         }
     }while(choixVisiteur!=3);
-    if(EstDansLaBaseAgent("62222")==true)
-        cout << "oui";
-    else
-        cout << "non";
     
 }
 
