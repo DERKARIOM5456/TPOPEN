@@ -36,7 +36,7 @@ float TerminaleC::CalculerMoyenne()
 {
   float som{0};
   for (int i = 0; i < 6; i++) {
-    som += matiere[i].GetNote()*matiere[i].GetCoef();
+    som = som + matiere[i].GetNote()*matiere[i].GetCoef();
   }
   return (som/18);
 }
