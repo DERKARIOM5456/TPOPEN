@@ -27,7 +27,7 @@ void TerminaleC::SaisirNote()
   float note=0;
   for(int i=0;i<6;i++)
   {
-    cout << matiere[i].nom << " : " ;
+    cout << matiere[i].nom << ": " ;
     cin >> note;
     matiere[i].SetNote(note);
   }
@@ -35,7 +35,7 @@ void TerminaleC::SaisirNote()
 float TerminaleC::CalculerMoyenne()
 {
   float som{0};
-  for (int i = 0; i < 6; i++) {
+  for (int i=0;i<6;i++) {
     som = som + matiere[i].GetNote()*matiere[i].GetCoef();
   }
   return (som/18);
