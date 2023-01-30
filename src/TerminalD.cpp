@@ -16,7 +16,7 @@ TerminaleD::TerminaleD():Terminale(6)
     matiere[3].SetCoef(5);
     matiere[4].SetNom("Philosophie");
     matiere[4].SetNote(0);
-    matiere[4].SetCoef(3);
+    matiere[4].SetCoef(2);
     matiere[5].SetNom("Anglais");
     matiere[5].SetNote(0);
     matiere[5].SetCoef(2);
