@@ -8,7 +8,6 @@ class TerminaleC:public Terminale
   	public:
   		TerminaleC(int);
   		void SaisirNote();
+		~TerminaleC();
 };
 #endif
-
-

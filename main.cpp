@@ -29,8 +29,6 @@ int main()
     int ressai;
     string matAgent;
     TerminaleD D(6);
-    TerminaleC C(6);
-    TerminaleE E(6);
     
     do
     {

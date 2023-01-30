@@ -7,5 +7,6 @@ class TerminaleD: public Terminale
    public:
    TerminaleD(int);
    void SaisirNote();
+   ~TerminaleD();
 };
 #endif

@@ -42,3 +42,8 @@ float TerminaleD::CalculerMoyenne()
     }
     return(noteTotal/coefTotal);
 }
+TerminaleD::~TerminaleD()
+{
+	delete(matiere);
+	nbrMatiere=0;
+}

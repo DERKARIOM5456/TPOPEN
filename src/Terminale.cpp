@@ -7,6 +7,7 @@ Terminale::Terminale(int nbr)
 {
 	nbrMatiere=nbr;
 	matiere=new Matiere[nbrMatiere];
+	matiere = NULL;
 }
 Terminale::~Terminale()
 {
