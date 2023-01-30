@@ -1,44 +1,43 @@
-#include<iostream>
-#include"TerminaleD.hpp"
-TerminaleD::TerminaleD():Terminale(6)
+#include <iostream>
+#include "../include/TerminaleC.hpp"
+using namespace std;
+TerminaleC::TerminaleC():Terminale(6)
 {
-    matiere[0].SetNom("Mathematique");
-    matiere[0].SetNote(0);
-    matiere[0].SetCoef(5);
-    matiere[1].SetNom("PhysiqueChimie");
-    matiere[1].SetNote(0);
-    matiere[1].SetCoef(5);
-    matiere[2].SetNom("Francais");
-    matiere[2].SetNote(0);
-    matiere[2].SetCoef(3);
-    matiere[3].SetNom("SVT");
-    matiere[3].SetNote(0);
-    matiere[3].SetCoef(5);
-    matiere[4].SetNom("Philosophie");
-    matiere[4].SetNote(0);
-    matiere[4].SetCoef(2);
-    matiere[5].SetNom("Anglais");
-    matiere[5].SetNote(0);
-    matiere[5].SetCoef(2);
+  matiere[0].SetNom("Maths");
+  matiere[0].SetCoef(5);
+  matiere[0].SetNote(0);
+  matiere[1].SetNom("PC"); 
+  matiere[1].SetCoef(5);
+  matiere[1].SetNote(0);
+  matiere[2].SetNom("SVT");
+  matiere[2].SetCoef(5);
+  matiere[2].SetNote(0);
+  matiere[3].SetNom("Anglais");
+  matiere[3].SetCoef(2);
+  matiere[3].SetNote (0);
+  matiere[4].SetNom("Français");
+  matiere[4].SetCoef(3);
+  matiere[4].SetNote(0);
+  matiere[5].SetNom("Philo");
+  matiere[5].SetCoef(2);
+  matiere[5].SetNote(0);
 }
-void TerminaleD::SaisirNote()
+
+void TerminaleC::SaisirNote()
 {
-    int n;
-  for(int i(0); i<6 ;i++)
+  float note=0;
+  for(int i=0;i<6;i++)
   {
-      cout << matiere[i].GetNom() <<":" <<endl;
-      cin >> n ;
-      matiere[i].SetNote(n);
+    cout << "Saisir la note de " << matiere[i].nom << " : " ;
+    cin >> note;
+    matiere[i].SetNote(note*matiere[i].GetCoef());
   }
 }
-float TerminaleD::CalculerMoyenne()
+float TerminaleC::CalculerMoyenne()
 {
-    float noteTotal=0; 
-    int coefTotal=0;
-    for(int i(0);i<6;i++)
-    {
-          noteTotal= noteTotal+matiere[i].GetNote()*matiere[i].GetCoef();
-          coefTotal=coefTotal+matiere[i].GetCoef();
-    }
-    return(noteTotal/coefTotal);
+  float som{0};
+  for (int i = 0; i < 5; i++) {
+    som += matiere[i].GetNote();
+  }
+  return (som/22);
 }
