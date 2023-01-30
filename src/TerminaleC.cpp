@@ -25,7 +25,7 @@ TerminaleC::TerminaleC():Terminale(6)
 
 void TerminaleC::SaisirNote()
 {
-  int note=0;
+  float note=0;
   for(int i=0;i<6;i++)
   {
     cout << "Saisir la note de " << matiere[i].nom << " : " ;
@@ -35,7 +35,7 @@ void TerminaleC::SaisirNote()
 }
 float TerminaleC::CalculerMoyenne()
 {
-  int som{0};
+  float som{0};
   for (int i = 0; i < 5; i++) {
     som += matiere[i].GetNote();
   }
