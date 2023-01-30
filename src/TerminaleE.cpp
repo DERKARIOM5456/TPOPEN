@@ -11,10 +11,10 @@ TerminaleE::TerminaleE():Terminale(6)
     matiere[2].SetNom("Francais");
     matiere[2].SetNote(0);
     matiere[2].SetCoef(3);
-    matiere[3].SetNom("Dessin Technique");
+    matiere[3].SetNom("DessinTechnique");
     matiere[3].SetNote(0);
     matiere[3].SetCoef(5);
-    matiere[4].SetNom("Mecanique General");
+    matiere[4].SetNom("MecaniqueGeneral");
     matiere[4].SetNote(0);
     matiere[4].SetCoef(3);
     matiere[5].SetNom("Anglais");
